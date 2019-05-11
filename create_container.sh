@@ -27,7 +27,7 @@ pushd $TMP >/dev/null
 wget -q https://raw.githubusercontent.com/whiskerz007/proxmox_tuya-convert_container/master/{install_tuya-convert,login}.sh
 
 # Check for dependencies
-apt update
+#apt update
 IW=`apt-cache policy iw | sed -n 's/^\s*Installed: \(.*$\)/\1/p'`
 if [ "$IW" = "(none)" ]; then
   apt install -y iw ||
